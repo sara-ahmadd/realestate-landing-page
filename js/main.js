@@ -12,8 +12,7 @@ let count = 30;
 
 leftArrow.addEventListener("click", () => {
   count += 200;
-  console.log(featuresContenet.style.transform);
-  if (eachCardWidth + count > 2050) {
+  if (eachCardWidth + count > 2000) {
     count = 30;
     featuresContenet.style.transform = `translateX(0)`;
   } else {
@@ -23,8 +22,7 @@ leftArrow.addEventListener("click", () => {
   }
 });
 rightArrow.addEventListener("click", () => {
-  count -= 150;
-  console.log(featuresContenet.style.transform);
+  count -= 100;
   if (eachCardWidth - count > 0) {
     featuresContenet.style.transform = `translateX(${0}px)`;
     count = 30;

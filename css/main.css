@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   background-image: linear-gradient(
     to top left,
     var(--buttons-color),
@@ -56,7 +56,7 @@ ul .last-item {
   -o-border-radius: 20px;
   font-weight: bold;
 }
-.container {
+.my-container {
   overflow: hidden;
   padding: 10px 70px;
   width: 100%;
@@ -89,7 +89,7 @@ nav {
   align-items: center;
   width: 100%;
 }
-.landing-page .container {
+.landing-page .my-container {
   background: transparent;
 }
 .parteners p {
@@ -125,7 +125,7 @@ h1 {
   flex-direction: column;
   width: 100%;
 }
-.landing-page .container {
+.landing-page .my-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -185,7 +185,6 @@ form .location {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  /* padding-left: 15px; */
   left: 15px;
   color: var(--buttons-color);
   -webkit-transform: translateY(-50%);
@@ -279,10 +278,10 @@ img {
   margin: 10px;
 }
 @media (max-width: 1200px) {
-  .container {
+  .my-container {
     padding: 20px;
   }
-  .landing-page .container {
+  .landing-page .my-container {
     flex-direction: column;
   }
   .right-side,
@@ -309,7 +308,7 @@ img {
   }
 }
 /*features*/
-.features .container {
+.features .my-container {
   background: transparent;
 }
 .title {
@@ -366,22 +365,14 @@ img {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.features .container {
-  width: 100vw;
+.features .my-container {
   padding-left: 0;
+  position: relative;
 }
-.features .container .head {
-  width: 80%;
-  padding-left: 0;
-}
+
 .features .content {
-  /*display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 300px));
-  grid-auto-rows: 400px;
-  gap: 30px;
-  padding: 20px;
-  */
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
@@ -396,12 +387,21 @@ img {
 }
 .card {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 220px;
+  flex-direction: column !important;
+  justify-content: stretch !important;
+  align-items: center;
+  gap: 10px;
+  width: 240px !important;
+  border: none !important;
+  height: 600px;
+}
+
+.card .text h4,
+.card .text p {
+  font-size: 20px;
 }
 .card .img {
-  height: 300px;
+  height: 300px !important;
   width: 100%;
   margin-bottom: 20px;
   position: relative;
@@ -465,13 +465,17 @@ img {
   bottom: 20px;
   left: 10px;
 }
-.ready-to-sell .container,
-.about .container {
+.ready-to-sell .my-container,
+.about .my-container {
   background: transparent;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .ready-to-sell .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 8rem;
+
   align-items: center;
   width: 100%;
   height: fit-content;
@@ -487,32 +491,18 @@ img {
 }
 .ready-to-sell .content .img {
   width: 35%;
-  height: 80%;
+  height: 500px;
   position: relative;
 }
-.ready-to-sell .content .img img {
-  width: 100%;
-  height: 100%;
+.ready-to-sell .content .img video {
+  max-height: 100%;
   border-radius: 7px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
 }
-.ready-to-sell .content .img i {
-  position: absolute;
-  color: #ffffff;
-  cursor: pointer;
-  top: 50%;
-  content: "";
-  left: 50%;
-  font-size: 100px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
+
 .ready-to-sell .header .intro .text,
 .house {
   color: rgb(88, 87, 87);
@@ -547,7 +537,7 @@ h1 {
   width: 50px;
   height: 50px;
 }
-.reviews .container {
+.reviews .my-container {
   background: transparent;
 }
 .reviews .title,
@@ -628,7 +618,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
   background-color: #fafafa;
   padding: 20px;
   border-radius: 20px;
@@ -663,17 +652,18 @@ h1 {
 .about {
   padding: 20px 0;
 }
+.about .my-container {
+  height: fit-content;
+}
 .about .articles {
-  height: 500px;
-  padding: 40px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  height: 80%;
-  align-items: center;
+  gap: 10px;
+  align-items: flex-start;
 }
 .about .articles .right-art .img {
-  height: 70%;
+  height: 50%;
   width: 100%;
 }
 .about .articles .left-art,
@@ -683,8 +673,7 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 40px;
-  height: 100%;
+  gap: 20px;
 }
 .about .articles .left-art .card p,
 .about .articles .right-art p {
@@ -701,15 +690,16 @@ h1 {
 }
 .about .articles .left-art .card {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: row !important;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  width: 100%;
-  height: 150px;
+  gap: 10px;
+  width: 100% !important;
+  height: calc(100% / 3.5);
 }
+
 .about .articles .left-art .card .img {
-  width: 40%;
+  width: 200px;
   height: 100%;
 }
 .about .articles .left-art .card .img img,
@@ -721,6 +711,20 @@ h1 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .about .articles .left-art {
+    width: 700px;
+  }
+  .about .articles .left-art .card {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    grid-template: 10px;
+    height: fit-content;
+    width: 100%;
+  }
 }
 .subscribe {
   padding: 50px 0;
@@ -742,12 +746,12 @@ h1 {
   margin-bottom: 30px;
 }
 
-.subscribe .container {
+.subscribe .my-container {
   background: transparent;
   text-align: center;
 }
-.subscribe .container form,
-.subscribe .container h2 {
+.subscribe .my-container form,
+.subscribe .my-container h2 {
   width: 40%;
   margin: 10px auto;
 }
@@ -800,6 +804,9 @@ h1 {
   .features .head {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .features .options ul {
+    flex-direction: column;
   }
   .features .content {
     grid-template-columns: repeat(2, minmax(250px, 400px));

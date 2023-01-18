@@ -380,7 +380,6 @@ img {
   gap: 30px;
   padding: 20px;
   */
-  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -392,6 +391,7 @@ img {
   -moz-transition: 0.3s linear;
   -ms-transition: 0.3s linear;
   -o-transition: 0.3s linear;
+  overflow: hidden;
 }
 .card {
   display: flex;

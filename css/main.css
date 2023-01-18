@@ -17,7 +17,7 @@ body {
     transparent,
     transparent
   );
-  overflow-x: hidden;
+  overflow: hidden;
 }
 ul {
   list-style: none;
@@ -57,6 +57,7 @@ ul .last-item {
   font-weight: bold;
 }
 .container {
+  overflow: hidden;
   padding: 10px 70px;
   width: 100%;
   margin: 0 auto;

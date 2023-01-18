@@ -17,7 +17,7 @@ body {
     transparent,
     transparent
   );
-  overflow: hidden;
+  overflow-x: hidden;
 }
 ul {
   list-style: none;

@@ -612,8 +612,8 @@ h1 {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.rev .mini-card {
-  width: 80%;
+.mini-card {
+  color: #000 !important;
   max-height: 300px;
   display: flex;
   flex-direction: column;
@@ -628,22 +628,22 @@ h1 {
   position: absolute;
   bottom: -10%;
 }
-.rev .mini-card .rating {
+.mini-card .rating {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.rev .mini-card .rating .rate {
+.mini-card .rating .rate {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-.rev .mini-card .rating .rate i {
+.mini-card .rating .rate i {
   color: #f79927;
 }
-.rev .mini-card .header {
+.mini-card .header {
   display: flex;
   justify-content: center;
   align-items: center;
